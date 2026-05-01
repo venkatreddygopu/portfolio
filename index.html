@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Venkat Reddy Gopu | Senior RPA Developer | UiPath & Kofax Expert</title>
+<meta name="description" content="Senior RPA Developer with 9.8+ years of IT experience specializing in UiPath, Kofax RPA, Orchestrator, and enterprise automation. Based in Dubai, UAE."/>
+<meta name="keywords" content="RPA Developer, UiPath, Kofax RPA, Automation, Orchestrator, Dubai, API Integration"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink:#0F1923;--ink2:#2C3E50;--muted:#6B7E8F;--faint:#A8B8C4;
+  --rule:#E4EAF0;--cream:#FAFBFC;--white:#FFFFFF;
+  --gold:#C9A84C;--gold-lt:#F5EDD6;--gold-md:rgba(201,168,76,.18);
+  --blue:#2563EB;--blue-lt:#EFF4FF;
+  --r:12px;--r-sm:7px;
+  --sans:'Outfit',sans-serif;--serif:'Fraunces',Georgia,serif;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* Typography */
+.label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem;margin-bottom:.9rem}
+.label::before{content:'';width:20px;height:1.5px;background:var(--gold);flex-shrink:0}
+.section-h{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;line-height:1.15;color:var(--ink);margin-bottom:.5rem}
+.section-sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.75}
+
+/* Layout */
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
+section{padding:clamp(4rem,8vw,6.5rem) 0}
+.divider{height:1px;background:var(--rule);margin:0 clamp(1.25rem,5vw,2.5rem)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,251,252,.93);backdrop-filter:blur(18px);border-bottom:1px solid var(--rule);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 4px 24px rgba(15,25,35,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:62px}
+.nav-logo{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--ink)}
+.nav-logo em{font-style:italic;color:var(--gold);margin-left:2px}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:.84rem;font-weight:500;color:var(--muted);transition:color .25s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{font-size:.82rem;font-weight:600;padding:.45rem 1.1rem;border-radius:100px;background:var(--ink);color:var(--white);transition:all .25s;border:none;cursor:pointer;font-family:var(--sans)}
+.nav-cta:hover{background:var(--gold);color:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.burger span{display:block;width:22px;height:1.5px;background:var(--ink);border-radius:2px}
+.drawer{display:none;position:fixed;top:62px;left:0;right:0;z-index:199;background:var(--white);border-bottom:1px solid var(--rule);padding:1.5rem 2rem;flex-direction:column;gap:1.25rem}
+.drawer.open{display:flex}
+.drawer a{font-size:1rem;font-weight:500;color:var(--muted)}
+
+/* HERO */
+#hero{min-height:100svh;display:flex;align-items:center;padding-top:62px;position:relative;overflow:hidden;background:var(--white)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 88% 50%,rgba(201,168,76,.06) 0%,transparent 70%),radial-gradient(ellipse 40% 50% at 8% 80%,rgba(37,99,235,.04) 0%,transparent 60%);pointer-events:none}
+.hero-deco{position:absolute;right:0;top:0;bottom:0;width:42%;pointer-events:none;opacity:.45}
+.hero-deco svg{width:100%;height:100%}
+.hero-content{position:relative;z-index:2;max-width:680px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold-lt);border:1px solid rgba(201,168,76,.3);border-radius:100px;padding:.3rem .9rem;font-size:.78rem;font-weight:600;color:var(--gold);margin-bottom:1.75rem;animation:fadeUp .5s ease both}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;animation:blink 2s infinite}
+.hero-name{font-family:var(--serif);font-size:clamp(2.8rem,7vw,4.8rem);font-weight:700;line-height:1.06;letter-spacing:-.02em;color:var(--ink);margin-bottom:1rem;animation:fadeUp .5s .08s ease both}
+.hero-name em{font-style:italic;color:var(--gold)}
+.hero-role{font-size:clamp(.95rem,2.2vw,1.15rem);font-weight:300;color:var(--muted);margin-bottom:1.6rem;animation:fadeUp .5s .16s ease both}
+.hero-role strong{font-weight:600;color:var(--ink2)}
+.hero-desc{font-size:1rem;color:var(--muted);max-width:500px;line-height:1.85;margin-bottom:2.25rem;animation:fadeUp .5s .24s ease both}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap;animation:fadeUp .5s .32s ease both}
+.hero-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:2.75rem;animation:fadeUp .5s .4s ease both}
+.pill{font-size:.74rem;font-weight:500;padding:.28rem .75rem;border-radius:100px;background:var(--cream);border:1px solid var(--rule);color:var(--muted)}
+.pill.hi{background:var(--gold-lt);border-color:rgba(201,168,76,.3);color:#8B6914}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.7rem 1.5rem;border-radius:100px;font-size:.87rem;font-weight:600;font-family:var(--sans);cursor:pointer;border:none;transition:all .25s var(--ease)}
+.btn-dark{background:var(--ink);color:var(--white)}
+.btn-dark:hover{background:var(--ink2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,25,35,.18)}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--rule)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--ink);font-weight:700}
+.btn-gold:hover{background:#B8943C;transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.3)}
+
+/* STATS */
+#stats{padding:0;background:var(--ink)}
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(255,255,255,.07)}
+.stat-cell{padding:1.75rem 1.25rem;border-right:1px solid rgba(255,255,255,.07);text-align:center}
+.stat-num{font-family:var(--serif);font-size:2.1rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:.75rem;color:rgba(255,255,255,.4);margin-top:.3rem;letter-spacing:.03em}
+
+/* ABOUT */
+#about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:260px 1fr;gap:4rem;align-items:start}
+.profile-card{background:var(--cream);border:1px solid var(--rule);border-radius:var(--r);padding:1.6rem;position:sticky;top:82px}
+.profile-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold-lt),var(--gold-md));border:2px solid rgba(201,168,76,.3);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold);margin-bottom:.9rem}
+.profile-name{font-family:var(--serif);font-size:1.05rem;font-weight:700;margin-bottom:.2rem}
+.profile-role{font-size:.78rem;color:var(--muted);margin-bottom:1.1rem}
+.profile-meta{display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.1rem}
+.meta-row{display:flex;gap:.55rem;align-items:flex-start;font-size:.79rem}
+.meta-icon{color:var(--gold);flex-shrink:0;margin-top:1px}
+.meta-text{color:var(--muted);line-height:1.4}
+.profile-divider{height:1px;background:var(--rule);margin:1.1rem 0}
+.profile-tools{display:flex;flex-wrap:wrap;gap:.35rem}
+.tc{font-size:.7rem;padding:.22rem .6rem;border-radius:100px;font-weight:500}
+.tc.p{background:var(--gold-lt);color:#8B6914;border:1px solid rgba(201,168,76,.25)}
+.tc.s{background:var(--blue-lt);color:var(--blue);border:1px solid rgba(37,99,235,.15)}
+.tc.n{background:var(--cream);color:var(--muted);border:1px solid var(--rule)}
+.about-body .lead{font-size:1.02rem;line-height:1.85;color:var(--ink2);margin-bottom:1.2rem}
+.about-body p{font-size:.93rem;line-height:1.85;color:var(--muted);margin-bottom:1rem}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.75rem}
+.str{padding:.9rem 1rem;border-radius:var(--r-sm);border:1px solid var(--rule);background:var(--cream);transition:border-color .25s,transform .25s}
+.str:hover{border-color:var(--gold);transform:translateY(-3px)}
+.si{font-size:1.2rem;margin-bottom:.4rem}
+.st{font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
+.sd{font-size:.76rem;color:var(--muted);line-height:1.5}
+
+/* SKILLS */
+#skills{background:var(--cream)}
+.skills-wrap{margin-top:2.75rem}
+.skill-row{display:flex;align-items:flex-start;gap:1.5rem;padding:1.35rem 0;border-bottom:1px solid var(--rule)}
+.skill-row:first-child{padding-top:0}
+.skill-row:last-child{border-bottom:none}
+.skill-cat-name{font-size:.8rem;font-weight:600;color:var(--ink2);min-width:150px;flex-shrink:0;padding-top:.15rem}
+.skill-tags-wrap{display:flex;flex-wrap:wrap;gap:.4rem}
+.stag{font-size:.78rem;padding:.27rem .75rem;border-radius:100px;font-weight:500;transition:all .2s;cursor:default}
+.stag.core{background:var(--gold-lt);color:#7A5F18;border:1px solid rgba(201,168,76,.25)}
+.stag.sec{background:var(--white);color:var(--muted);border:1px solid var(--rule)}
+.stag.sec:hover{border-color:var(--faint);color:var(--ink2)}
+
+/* EXPERIENCE */
+#experience{background:var(--white)}
+.exp-list{margin-top:2.25rem}
+.exp-item{display:grid;grid-template-columns:170px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--rule)}
+.exp-item:last-child{border-bottom:none}
+.exp-date{font-size:.73rem;font-weight:600;color:var(--gold);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.3rem}
+.exp-company{font-size:.8rem;color:var(--muted)}
+.exp-role{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:.55rem}
+.exp-desc{font-size:.88rem;color:var(--muted);line-height:1.8}
+.exp-tags{display:flex;flex-wrap:wrap;gap:.38rem;margin-top:.8rem}
+.exp-tag{font-size:.7rem;padding:.18rem .58rem;border-radius:100px;background:var(--cream);border:1px solid var(--rule);color:var(--muted);font-weight:500}
+
+/* PROJECTS */
+#projects{background:var(--cream)}
+.proj-controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:2.25rem;margin-bottom:2.25rem}
+.ftab{font-size:.77rem;font-weight:600;padding:.33rem .85rem;border-radius:100px;background:transparent;border:1.5px solid var(--rule);color:var(--muted);cursor:pointer;font-family:var(--sans);transition:all .2s}
+.ftab:hover,.ftab.on{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.15rem}
+.proj-card{background:var(--white);border:1px solid var(--rule);border-radius:var(--r);display:flex;flex-direction:column;transition:border-color .25s,transform .25s,box-shadow .25s;overflow:hidden}
+.proj-card:hover{border-color:rgba(201,168,76,.45);transform:translateY(-5px);box-shadow:0 16px 40px rgba(15,25,35,.08)}
+.proj-card[hidden]{display:none}
+.proj-top{padding:1.35rem 1.35rem .7rem;display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem}
+.proj-icon{width:40px;height:40px;border-radius:9px;flex-shrink:0;background:var(--gold-lt);border:1px solid rgba(201,168,76,.2);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.proj-badge{font-size:.69rem;font-weight:600;padding:.22rem .6rem;border-radius:100px;background:var(--cream);border:1px solid var(--rule);color:var(--muted)}
+.proj-body{padding:.45rem 1.35rem 1.1rem;flex:1}
+.proj-client{font-size:.7rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.35rem}
+.proj-title{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--ink);line-height:1.3;margin-bottom:.55rem}
+.proj-desc{font-size:.82rem;color:var(--muted);line-height:1.75}
+.proj-foot{padding:.8rem 1.35rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.38rem}
+.ttag{font-size:.68rem;padding:.18rem .55rem;border-radius:100px;background:var(--blue-lt);color:var(--blue);border:1px solid rgba(37,99,235,.12);font-weight:500}
+
+/* RESUME CTA */
+#resume-cta{background:var(--ink);padding:4.5rem 0}
+.resume-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.resume-text h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--white);margin-bottom:.4rem}
+.resume-text p{color:rgba(255,255,255,.42);font-size:.9rem}
+.resume-actions{display:flex;gap:.7rem;flex-shrink:0;flex-wrap:wrap}
+
+/* CONTACT */
+#contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.contact-intro h3{font-family:var(--serif);font-size:1.5rem;font-weight:700;margin-bottom:.65rem}
+.contact-intro p{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:1.75rem}
+.clinks{display:flex;flex-direction:column;gap:.7rem}
+.clink{display:flex;align-items:center;gap:.85rem;padding:.85rem 1rem;border-radius:var(--r-sm);border:1px solid var(--rule);background:var(--cream);transition:all .2s}
+.clink:hover{border-color:var(--gold);transform:translateX(4px)}
+.clink-icon{width:32px;height:32px;border-radius:8px;background:var(--gold-lt);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.clink-meta span{font-size:.68rem;color:var(--faint);display:block}
+.clink-meta strong{font-size:.83rem;color:var(--ink);font-weight:500}
+.cf{display:flex;flex-direction:column;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:.38rem}
+.fg label{font-size:.76rem;font-weight:600;color:var(--muted);letter-spacing:.03em}
+.fg input,.fg textarea{background:var(--cream);border:1.5px solid var(--rule);border-radius:var(--r-sm);padding:.75rem .95rem;font-family:var(--sans);font-size:.87rem;color:var(--ink);outline:none;transition:border-color .2s;resize:none}
+.fg input:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--faint)}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fs-msg{display:none;padding:.8rem 1rem;border-radius:var(--r-sm);background:var(--gold-lt);border:1px solid rgba(201,168,76,.3);color:#7A5F18;font-size:.82rem;font-weight:500}
+
+/* FOOTER */
+footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 0}
+.foot-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-copy{font-size:.76rem;color:var(--faint)}
+.foot-links{display:flex;gap:1.5rem}
+.foot-links a{font-size:.76rem;color:var(--muted);transition:color .2s}
+.foot-links a:hover{color:var(--gold)}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--rule);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--faint)}
+
+/* Responsive */
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .about-grid{grid-template-columns:1fr;gap:2.25rem}
+  .profile-card{position:static}
+  .contact-grid{grid-template-columns:1fr;gap:2.25rem}
+  .exp-item{grid-template-columns:1fr;gap:.4rem}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .fr2{grid-template-columns:1fr}
+  .sg{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+  .proj-grid{grid-template-columns:1fr}
+  .resume-inner{flex-direction:column;align-items:flex-start}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="nav-logo">Venkat Reddy<em>.</em></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- EDIT: resume filename -->
+    <a href="VenkatReddyGopu_Sr_RPA_Developer_9years.pdf" download class="nav-cta">Download CV</a>
+    <button class="burger" onclick="toggleDrawer()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="drawer" id="drawer">
+  <a href="#about" onclick="closeDrawer()">About</a>
+  <a href="#skills" onclick="closeDrawer()">Skills</a>
+  <a href="#experience" onclick="closeDrawer()">Experience</a>
+  <a href="#projects" onclick="closeDrawer()">Projects</a>
+  <a href="#contact" onclick="closeDrawer()">Contact</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section id="hero" aria-label="Introduction">
+  <div class="hero-bg"></div>
+  <div class="hero-deco" aria-hidden="true">
+    <svg viewBox="0 0 500 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#C9A84C" stop-opacity=".2"/>
+          <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <line x1="80"  y1="0" x2="80"  y2="900" stroke="#E4EAF0" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="900" stroke="#E4EAF0" stroke-width="1"/>
+      <line x1="320" y1="0" x2="320" y2="900" stroke="#E4EAF0" stroke-width="1"/>
+      <line x1="440" y1="0" x2="440" y2="900" stroke="#E4EAF0" stroke-width="1"/>
+      <line x1="0" y1="200" x2="500" y2="200" stroke="#E4EAF0" stroke-width="1"/>
+      <line x1="0" y1="450" x2="500" y2="450" stroke="#E4EAF0" stroke-width="1"/>
+      <line x1="0" y1="700" x2="500" y2="700" stroke="#E4EAF0" stroke-width="1"/>
+      <circle cx="440" cy="200" r="70" fill="none" stroke="url(#lg1)" stroke-width="1.5"/>
+      <circle cx="440" cy="200" r="35" fill="none" stroke="rgba(201,168,76,.1)" stroke-width="1"/>
+      <circle cx="80"  cy="450" r="45" fill="none" stroke="rgba(201,168,76,.08)" stroke-width="1"/>
+      <line x1="200" y1="0" x2="500" y2="300" stroke="rgba(201,168,76,.09)" stroke-width="1"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="hero-content">
+      <!-- EDIT: Availability / location -->
+      <div class="hero-eyebrow">Open to Opportunities &nbsp;·&nbsp; Dubai, UAE</div>
+      <!-- EDIT: Your name -->
+      <h1 class="hero-name">Venkat Reddy<br/><em>Gopu</em></h1>
+      <!-- EDIT: Title / years -->
+      <p class="hero-role"><strong>Senior RPA Developer</strong>&nbsp; ·&nbsp; UiPath &amp; Kofax Expert&nbsp; ·&nbsp; 9.8+ Years</p>
+      <!-- EDIT: Short pitch -->
+      <p class="hero-desc">I design and deploy intelligent automation that eliminates manual work, connects enterprise systems, and delivers measurable business value — across logistics, finance, real estate, and beyond.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-dark">Get in Touch →</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+        <!-- EDIT: resume filename -->
+        <a href="VenkatReddyGopu_Sr_RPA_Developer_9years.pdf" download class="btn btn-outline">⬇ Resume</a>
+      </div>
+      <!-- EDIT: Your key technologies -->
+      <div class="hero-pills">
+        <span class="pill hi">UiPath</span>
+        <span class="pill hi">Kofax RPA</span>
+        <span class="pill hi">Orchestrator</span>
+        <span class="pill">API Integration</span>
+        <span class="pill">KTA</span>
+        <span class="pill">PowerShell</span>
+        <span class="pill">SharePoint</span>
+        <span class="pill">Power BI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats" role="region" aria-label="Key numbers">
+  <div class="stats-bar">
+    <!-- EDIT: Your numbers -->
+    <div class="stat-cell reveal"><div class="stat-num">9.8+</div><div class="stat-label">Years in IT</div></div>
+    <div class="stat-cell reveal"><div class="stat-num">5+</div><div class="stat-label">Years in RPA</div></div>
+    <div class="stat-cell reveal"><div class="stat-num">9+</div><div class="stat-label">Projects Delivered</div></div>
+    <div class="stat-cell reveal"><div class="stat-num">6</div><div class="stat-label">Industries Served</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" aria-label="About">
+  <div class="wrap">
+    <div class="about-grid">
+      <aside class="reveal">
+        <div class="profile-card">
+          <!-- EDIT: Initials / name / role / contact -->
+          <div class="profile-avatar">VRG</div>
+          <div class="profile-name">Venkat Reddy Gopu</div>
+          <div class="profile-role">Sr. RPA Developer</div>
+          <div class="profile-meta">
+            <div class="meta-row"><span class="meta-icon">📍</span><span class="meta-text">Dubai, UAE</span></div>
+            <div class="meta-row"><span class="meta-icon">✉️</span><span class="meta-text">venkatgopu93@gmail.com</span></div>
+            <div class="meta-row"><span class="meta-icon">📞</span><span class="meta-text">+971 567 362 208</span></div>
+            <div class="meta-row"><span class="meta-icon">🎓</span><span class="meta-text">B.Tech ECE — JNTU Hyderabad</span></div>
+          </div>
+          <div class="profile-divider"></div>
+          <!-- EDIT: Your tools -->
+          <div class="profile-tools">
+            <span class="tc p">Kofax RPA</span><span class="tc p">UiPath</span>
+            <span class="tc s">Orchestrator</span><span class="tc s">KTA</span>
+            <span class="tc n">VBA</span><span class="tc n">PowerShell</span>
+            <span class="tc n">REST APIs</span><span class="tc n">Jira</span>
+            <span class="tc n">BMC Helix</span>
+          </div>
+        </div>
+      </aside>
+      <div class="about-body reveal">
+        <div class="label">About Me</div>
+        <h2 class="section-h">Automating the complex,<br/>simplifying the essential</h2>
+        <!-- EDIT: Bio paragraphs -->
+        <p class="lead">With nearly a decade in IT and 5+ years laser-focused on Robotic Process Automation, I build bots that actually work in production — reliable, well-documented, and designed to scale.</p>
+        <p>My experience spans Kofax RPA and UiPath across logistics, banking, real estate, water utilities, and automotive services. I've delivered solutions ranging from simple email automation to complex multi-system orchestrations involving document intelligence (KTA), MFA authentication, multi-database lookups, and Power BI integrations.</p>
+        <p>I'm equally comfortable in the design phase as I am in deployment and Orchestrator management — and I take exception handling seriously, because a bot that fails silently is worse than no bot at all.</p>
+        <!-- EDIT: Strengths -->
+        <div class="sg">
+          <div class="str"><div class="si">⚙️</div><div class="st">End-to-End Delivery</div><div class="sd">From process analysis and design to deployment, monitoring, and handover</div></div>
+          <div class="str"><div class="si">🔌</div><div class="st">System Integration</div><div class="sd">APIs, SharePoint, databases, email systems, ERP, and web applications</div></div>
+          <div class="str"><div class="si">🛡️</div><div class="st">Exception Handling</div><div class="sd">Production-ready bots with clear logging, alerts, and fallback logic</div></div>
+          <div class="str"><div class="si">📊</div><div class="st">Automation Governance</div><div class="sd">Orchestrator management, health monitoring, audit trails, and reporting</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills" aria-label="Skills">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label">Skills</div>
+      <h2 class="section-h">Technical Expertise</h2>
+      <p class="section-sub">A focused, battle-tested toolkit for enterprise automation.</p>
+    </div>
+    <!-- EDIT: Add/remove rows and tags -->
+    <div class="skills-wrap reveal">
+      <div class="skill-row">
+        <div class="skill-cat-name">RPA Platforms</div>
+        <div class="skill-tags-wrap">
+          <span class="stag core">Kofax RPA</span><span class="stag core">UiPath</span>
+          <span class="stag core">KTA (Kofax Transformation)</span>
+          <span class="stag sec">Studio / StudioX</span><span class="stag sec">Attended &amp; Unattended Bots</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat-name">Robot Management</div>
+        <div class="skill-tags-wrap">
+          <span class="stag core">UiPath Orchestrator</span><span class="stag core">Kofax Management Console</span>
+          <span class="stag sec">Queue Management</span><span class="stag sec">Bot Scheduling</span>
+          <span class="stag sec">Health Monitoring</span><span class="stag sec">Alert Configuration</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat-name">Programming</div>
+        <div class="skill-tags-wrap">
+          <span class="stag core">VBA</span><span class="stag core">PowerShell</span>
+          <span class="stag sec">SQL (Multi-DB Queries)</span>
+          <span class="stag sec">HTML / CSS</span><span class="stag sec">Regular Expressions</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat-name">Integration</div>
+        <div class="skill-tags-wrap">
+          <span class="stag core">REST APIs</span><span class="stag core">Web Automation</span>
+          <span class="stag core">Desktop Automation</span><span class="stag sec">SharePoint</span>
+          <span class="stag sec">Email Automation (SMTP / API)</span>
+          <span class="stag sec">Excel / Data Processing</span><span class="stag sec">Power BI</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat-name">Security &amp; Auth</div>
+        <div class="skill-tags-wrap">
+          <span class="stag core">MFA Automation</span><span class="stag sec">Microsoft Token Activity</span>
+          <span class="stag sec">Credential Vault</span><span class="stag sec">Secure String Handling</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat-name">Project Tools</div>
+        <div class="skill-tags-wrap">
+          <span class="stag core">Jira</span><span class="stag core">BMC Helix</span>
+          <span class="stag sec">Bugzilla</span><span class="stag sec">Agile / Scrum</span><span class="stag sec">SDLC</span>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-cat-name">Industries</div>
+        <div class="skill-tags-wrap">
+          <span class="stag sec">Logistics &amp; Supply Chain</span><span class="stag sec">Finance &amp; Banking</span>
+          <span class="stag sec">Real Estate</span><span class="stag sec">Water / Utilities</span>
+          <span class="stag sec">Automotive Services</span><span class="stag sec">Travel &amp; Aggregation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-label="Work Experience">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label">Experience</div>
+      <h2 class="section-h">Career History</h2>
+      <p class="section-sub">9.8+ years building automation solutions across three organizations.</p>
+    </div>
+    <!-- EDIT: Add / update jobs -->
+    <div class="exp-list">
+      <article class="exp-item reveal">
+        <div>
+          <div class="exp-date">Dec 2025 — Present</div>
+          <div class="exp-company">Aptiva Corp</div>
+        </div>
+        <div>
+          <h3 class="exp-role">Senior RPA Developer</h3>
+          <p class="exp-desc">Leading RPA solution design and implementation across client engagements. Responsible for end-to-end automation delivery — from process discovery and solution architecture through development, testing, and production deployment — with focus on scalability, reliability, and governance.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">UiPath</span><span class="exp-tag">Kofax RPA</span>
+            <span class="exp-tag">Orchestrator</span><span class="exp-tag">Solution Architecture</span>
+          </div>
+        </div>
+      </article>
+      <article class="exp-item reveal">
+        <div>
+          <div class="exp-date">Aug 2021 — Nov 2025</div>
+          <div class="exp-company">Tiera Technologies Pvt Ltd</div>
+        </div>
+        <div>
+          <h3 class="exp-role">Software Engineer — RPA</h3>
+          <p class="exp-desc">Delivered 7+ automation projects spanning logistics, banking, real estate, utilities, automotive, and travel. Built production bots integrating REST APIs, SharePoint, multi-database lookups, KTA document intelligence, MFA authentication, and Power BI reporting. Managed Orchestrator configuration, bot scheduling, and robot health monitoring.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">UiPath</span><span class="exp-tag">Kofax RPA</span>
+            <span class="exp-tag">KTA</span><span class="exp-tag">API Integration</span>
+            <span class="exp-tag">SharePoint</span><span class="exp-tag">Power BI</span>
+          </div>
+        </div>
+      </article>
+      <article class="exp-item reveal">
+        <div>
+          <div class="exp-date">Oct 2017 — May 2021</div>
+          <div class="exp-company">Suvarnabhoomi Developer Pvt Ltd</div>
+        </div>
+        <div>
+          <h3 class="exp-role">RPA Developer</h3>
+          <p class="exp-desc">Started my RPA career designing and deploying business process automation. Built foundational expertise in Kofax RPA, workflow design, web and desktop automation, exception handling, and enterprise system integration across client projects.</p>
+          <div class="exp-tags">
+            <span class="exp-tag">Kofax RPA</span><span class="exp-tag">Web Automation</span>
+            <span class="exp-tag">Desktop Automation</span><span class="exp-tag">VBA</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section id="projects" aria-label="Projects">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label">Projects</div>
+      <h2 class="section-h">Selected Work</h2>
+      <p class="section-sub">End-to-end automation solutions delivered across industries.</p>
+    </div>
+    <div class="proj-controls reveal">
+      <button class="ftab on" onclick="filter(this,'all')">All</button>
+      <button class="ftab" onclick="filter(this,'kofax')">Kofax RPA</button>
+      <button class="ftab" onclick="filter(this,'uipath')">UiPath</button>
+      <button class="ftab" onclick="filter(this,'logistics')">Logistics</button>
+      <button class="ftab" onclick="filter(this,'finance')">Finance</button>
+    </div>
+    <!-- EDIT: Add / remove / edit project cards.
+         data-cat = space-separated filter keywords -->
+    <div class="proj-grid" id="pgrid">
+
+      <article class="proj-card reveal" data-cat="kofax logistics">
+        <div class="proj-top"><div class="proj-icon">📄</div><span class="proj-badge">Kofax + PowerShell</span></div>
+        <div class="proj-body">
+          <div class="proj-client">French Water Company</div>
+          <h3 class="proj-title">PO Conversion: Txt to Excel</h3>
+          <p class="proj-desc">API-driven mailbox scanning to identify and extract .txt PO attachments, transform them into structured Excel reports via PowerShell, and send automated stakeholder notifications with both source and processed files.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">Kofax RPA</span><span class="ttag">REST API</span><span class="ttag">PowerShell</span><span class="ttag">Excel</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="kofax">
+        <div class="proj-top"><div class="proj-icon">🔍</div><span class="proj-badge">Web + Multi-DB</span></div>
+        <div class="proj-body">
+          <div class="proj-client">French Water Company</div>
+          <h3 class="proj-title">Document Data Extraction &amp; Multi-DB Lookup</h3>
+          <p class="proj-desc">Bot logs into a fax web portal, extracts document numbers, and queries three databases sequentially — stopping at the first match. Sends dynamic emails with auto-resolved recipient addresses from the database.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">Kofax RPA</span><span class="ttag">Web Automation</span><span class="ttag">SQL</span><span class="ttag">Email</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="kofax logistics">
+        <div class="proj-top"><div class="proj-icon">🏭</div><span class="proj-badge">Inventory</span></div>
+        <div class="proj-body">
+          <div class="proj-client">Internal</div>
+          <h3 class="proj-title">Inventory Management System Automation</h3>
+          <p class="proj-desc">Downloads inventory reports across multiple warehouse locations, applies business-rule filtering on lot numbers, processes them in a single-lot screen, and archives results to date-stamped folders for full auditability.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">Kofax RPA</span><span class="ttag">Web App</span><span class="ttag">Excel</span><span class="ttag">File Management</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="kofax logistics">
+        <div class="proj-top"><div class="proj-icon">🚚</div><span class="proj-badge">KTA + RPA</span></div>
+        <div class="proj-body">
+          <div class="proj-client">US-Based Logistics Company</div>
+          <h3 class="proj-title">Manifests to Internal System (KTA &amp; RPA)</h3>
+          <p class="proj-desc">Automated manifest processing from webmail using KTA for intelligent data extraction into Excel, then an RPA workflow enters header and line-item data into the target ERP — eliminating manual data entry entirely.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">KTA</span><span class="ttag">Kofax RPA</span><span class="ttag">Excel</span><span class="ttag">ERP</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="kofax logistics">
+        <div class="proj-top"><div class="proj-icon">📦</div><span class="proj-badge">Multi-System</span></div>
+        <div class="proj-body">
+          <div class="proj-client">Logistics Enterprise</div>
+          <h3 class="proj-title">Outbound Process Automation</h3>
+          <p class="proj-desc">Extracts file numbers from webmail, retrieves details from a primary logistics system, then updates a second application with container loading facility data — looped across all records for consistent cross-system accuracy.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">Kofax RPA</span><span class="ttag">Multi-App</span><span class="ttag">Desktop Automation</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="uipath finance">
+        <div class="proj-top"><div class="proj-icon">🏦</div><span class="proj-badge">UiPath + MFA</span></div>
+        <div class="proj-body">
+          <div class="proj-client">Singapore Real Estate Major</div>
+          <h3 class="proj-title">GL Official Receipt Processing</h3>
+          <p class="proj-desc">Secure MFA-authenticated workflow using UiPath's Microsoft Token activity. Retrieves bank statements from SharePoint, validates records, creates batches, updates transaction amounts and discrepancy codes, and emails processed reports.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">UiPath</span><span class="ttag">MFA</span><span class="ttag">SharePoint</span><span class="ttag">Excel</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="kofax">
+        <div class="proj-top"><div class="proj-icon">💡</div><span class="proj-badge">Monitoring</span></div>
+        <div class="proj-body">
+          <div class="proj-client">International Automotive Services</div>
+          <h3 class="proj-title">RPA Robot Health Check</h3>
+          <p class="proj-desc">Automated fleet monitoring by extracting health metrics (warnings, errors, run counts, execution times) from the Kofax Management Console, compiling them into Excel reports, and auto-emailing stakeholders for proactive visibility.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">Kofax RPA</span><span class="ttag">Management Console</span><span class="ttag">Excel</span><span class="ttag">Reporting</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="kofax">
+        <div class="proj-top"><div class="proj-icon">✈️</div><span class="proj-badge">Travel Tech</span></div>
+        <div class="proj-body">
+          <div class="proj-client">US-Based Travel Aggregator</div>
+          <h3 class="proj-title">Fare Calculator Automation</h3>
+          <p class="proj-desc">Automated login into a carrier rates portal, ran multiple input combinations to retrieve rate values, structured outputs into Excel, and distributed to end users — eliminating hours of repetitive manual rate lookups.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">Kofax RPA</span><span class="ttag">Web Automation</span><span class="ttag">Excel</span><span class="ttag">Email</span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" data-cat="uipath logistics finance">
+        <div class="proj-top"><div class="proj-icon">📧</div><span class="proj-badge">API + Power BI</span></div>
+        <div class="proj-body">
+          <div class="proj-client">US-Based Logistics Major</div>
+          <h3 class="proj-title">Email Automation &amp; BI Reporting</h3>
+          <p class="proj-desc">API-driven solution extracting shared mailbox metadata (timestamps, senders, flags, attachments), structuring data into Excel, and feeding Power BI dashboards — delivering centralized operational visibility with zero manual effort.</p>
+        </div>
+        <div class="proj-foot">
+          <span class="ttag">UiPath</span><span class="ttag">REST API</span><span class="ttag">Excel</span><span class="ttag">Power BI</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESUME CTA -->
+<section id="resume-cta" aria-label="Download Resume">
+  <div class="wrap resume-inner">
+    <div class="resume-text reveal">
+      <h2>Ready to see the full picture?</h2>
+      <p>Download my resume for a complete overview of experience, skills, and achievements.</p>
+    </div>
+    <div class="resume-actions reveal">
+      <!-- EDIT: resume filename -->
+      <a href="VenkatReddyGopu_Sr_RPA_Developer_9years.pdf" download class="btn btn-gold">⬇ Download Resume PDF</a>
+      <a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.65)">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:2.75rem">
+      <div class="label">Contact</div>
+      <h2 class="section-h">Let's Connect</h2>
+      <p class="section-sub">Open to RPA roles, automation consulting, and freelance projects — in Dubai and remote.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <!-- EDIT: Contact details -->
+        <div class="clinks">
+          <a href="mailto:venkatgopu93@gmail.com" class="clink">
+            <div class="clink-icon">✉️</div>
+            <div class="clink-meta"><span>Email</span><strong>venkatgopu93@gmail.com</strong></div>
+          </a>
+          <a href="tel:+971567362208" class="clink">
+            <div class="clink-icon">📞</div>
+            <div class="clink-meta"><span>Phone</span><strong>+971 567 362 208</strong></div>
+          </a>
+          <a href="https://linkedin.com/in/venkatgopu" target="_blank" rel="noopener" class="clink">
+            <div class="clink-icon">💼</div>
+            <div class="clink-meta"><span>LinkedIn</span><strong>linkedin.com/in/venkatgopu</strong></div>
+          </a>
+          <div class="clink">
+            <div class="clink-icon">📍</div>
+            <div class="clink-meta"><span>Location</span><strong>Dubai, UAE</strong></div>
+          </div>
+        </div>
+      </div>
+      <form class="cf reveal" id="cform" onsubmit="submitForm(event)" novalidate>
+        <div class="fr2">
+          <div class="fg"><label for="fn">Your Name</label><input type="text" id="fn" placeholder="Jane Smith" required/></div>
+          <div class="fg"><label for="fe">Email</label><input type="email" id="fe" placeholder="jane@company.com" required/></div>
+        </div>
+        <div class="fg"><label for="fs">Subject</label><input type="text" id="fs" placeholder="RPA Role / Automation Project"/></div>
+        <div class="fg"><label for="fm">Message</label><textarea id="fm" rows="5" placeholder="Tell me about the role or project..." required></textarea></div>
+        <div>
+          <button type="submit" class="btn btn-dark" id="fsbtn">Send Message →</button>
+        </div>
+        <div class="fs-msg" id="fsmsg">✅ Message sent! I'll be in touch within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <!-- EDIT: Year / name -->
+    <span class="foot-copy">© 2025 Venkat Reddy Gopu. All rights reserved.</span>
+    <div class="foot-links">
+      <a href="#hero">Top ↑</a>
+      <a href="#projects">Projects</a>
+      <a href="mailto:venkatgopu93@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/venkatgopu" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Nav shadow */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20),{passive:true});
+
+/* Mobile */
+function toggleDrawer(){document.getElementById('drawer').classList.toggle('open')}
+function closeDrawer(){document.getElementById('drawer').classList.remove('open')}
+
+/* Scroll reveal with stagger */
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const siblings=[...e.target.parentElement.querySelectorAll('.reveal')];
+    const i=siblings.indexOf(e.target);
+    setTimeout(()=>e.target.classList.add('in'),Math.min(i*65,300));
+    ro.unobserve(e.target);
+  });
+},{threshold:.07});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* Project filter */
+function filter(btn,cat){
+  document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.proj-card').forEach(c=>{
+    const cats=c.dataset.cat?c.dataset.cat.split(' '):[];
+    c.hidden=cat!=='all'&&!cats.includes(cat);
+  });
+}
+
+/* Contact form */
+function submitForm(e){
+  e.preventDefault();
+  const btn=document.getElementById('fsbtn');
+  btn.textContent='Sending…';btn.disabled=true;
+  /* EDIT: Replace with your endpoint
+     fetch('https://formspree.io/f/YOUR_FORM_ID',{method:'POST',body:new FormData(e.target)}) */
+  setTimeout(()=>{
+    document.getElementById('fsmsg').style.display='block';
+    e.target.reset();btn.textContent='Send Message →';btn.disabled=false;
+  },1000);
+}
+
+/* Active nav highlight */
+const secs=document.querySelectorAll('section[id]');
+const links=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(scrollY>=s.offsetTop-110)cur=s.id});
+  links.forEach(a=>{
+    const active=a.getAttribute('href')==='#'+cur;
+    a.style.color=active?'var(--ink)':'';
+    a.style.fontWeight=active?'600':'';
+  });
+},{passive:true});
+</script>
+</body>
+</html>
