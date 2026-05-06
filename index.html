@@ -6,6 +6,12 @@
 <title>Venkat Reddy Gopu | Senior RPA Developer | UiPath & Kofax Expert</title>
 <meta name="description" content="Senior RPA Developer with 9.8+ years of IT experience specializing in UiPath, Kofax RPA, Orchestrator, and enterprise automation. Based in Dubai, UAE."/>
 <meta name="keywords" content="RPA Developer, UiPath, Kofax RPA, Automation, Orchestrator, Dubai, API Integration"/>
+<meta name="author" content="Venkat Reddy Gopu"/>
+<meta property="og:title" content="Venkat Reddy Gopu | Senior RPA Developer"/>
+<meta property="og:description" content="Senior RPA Developer specialized in UiPath, Kofax RPA, Orchestrator, and enterprise automation delivery."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://venkatreddygopu.github.io/portfolio/"/>
+<meta name="robots" content="index, follow"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -24,6 +30,8 @@ html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;padding:.6rem .9rem;background:var(--ink);color:var(--white);z-index:999;border-radius:8px}
 
 /* Typography */
 .label{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.5rem;margin-bottom:.9rem}
@@ -135,6 +143,8 @@ nav.scrolled{box-shadow:0 4px 24px rgba(15,25,35,.06)}
 .exp-company{font-size:.8rem;color:var(--muted)}
 .exp-role{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:.55rem}
 .exp-desc{font-size:.88rem;color:var(--muted);line-height:1.8}
+.exp-desc + .exp-desc{margin-top:.75rem}
+.exp-desc.lead-highlight{background:var(--cream);border:1px solid var(--rule);border-left:3px solid var(--gold);padding:.7rem .8rem;border-radius:8px}
 .exp-tags{display:flex;flex-wrap:wrap;gap:.38rem;margin-top:.8rem}
 .exp-tag{font-size:.7rem;padding:.18rem .58rem;border-radius:100px;background:var(--cream);border:1px solid var(--rule);color:var(--muted);font-weight:500}
 
@@ -143,6 +153,10 @@ nav.scrolled{box-shadow:0 4px 24px rgba(15,25,35,.06)}
 .proj-controls{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:2.25rem;margin-bottom:2.25rem}
 .ftab{font-size:.77rem;font-weight:600;padding:.33rem .85rem;border-radius:100px;background:transparent;border:1.5px solid var(--rule);color:var(--muted);cursor:pointer;font-family:var(--sans);transition:all .2s}
 .ftab:hover,.ftab.on{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.proj-search{margin-bottom:1.2rem}
+.proj-search input{width:100%;max-width:460px;background:var(--white);border:1.5px solid var(--rule);border-radius:999px;padding:.62rem .95rem;font-family:var(--sans);font-size:.86rem;color:var(--ink);outline:none}
+.proj-search input:focus{border-color:var(--gold)}
+.proj-empty{display:none;font-size:.9rem;color:var(--muted);padding:.8rem 0}
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.15rem}
 .proj-card{background:var(--white);border:1px solid var(--rule);border-radius:var(--r);display:flex;flex-direction:column;transition:border-color .25s,transform .25s,box-shadow .25s;overflow:hidden}
 .proj-card:hover{border-color:rgba(201,168,76,.45);transform:translateY(-5px);box-shadow:0 16px 40px rgba(15,25,35,.08)}
@@ -163,6 +177,14 @@ nav.scrolled{box-shadow:0 4px 24px rgba(15,25,35,.06)}
 .resume-text h2{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:700;color:var(--white);margin-bottom:.4rem}
 .resume-text p{color:rgba(255,255,255,.42);font-size:.9rem}
 .resume-actions{display:flex;gap:.7rem;flex-shrink:0;flex-wrap:wrap}
+
+/* ATS */
+#ats{background:var(--white)}
+.ats-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;margin-top:2.2rem}
+.ats-card{background:var(--cream);border:1px solid var(--rule);border-radius:var(--r);padding:1rem 1.1rem}
+.ats-card h3{font-size:.9rem;color:var(--ink);margin-bottom:.45rem}
+.ats-card p,.ats-card li{font-size:.82rem;color:var(--muted);line-height:1.7}
+.ats-card ul{list-style:disc;padding-left:1.1rem}
 
 /* CONTACT */
 #contact{background:var(--white)}
@@ -192,6 +214,31 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
 .foot-links a{font-size:.76rem;color:var(--muted);transition:color .2s}
 .foot-links a:hover{color:var(--gold)}
 
+/* WhatsApp quick contact */
+.wa-float{
+  position:fixed;
+  right:1rem;
+  bottom:1rem;
+  z-index:250;
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  background:#25D366;
+  color:#fff;
+  border-radius:999px;
+  padding:.62rem .9rem;
+  font-size:.8rem;
+  font-weight:600;
+  box-shadow:0 10px 28px rgba(15,25,35,.18);
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease);
+}
+.wa-float:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 32px rgba(15,25,35,.22);
+  background:#1ebe5d;
+}
+.wa-float svg{width:16px;height:16px;display:block}
+
 /* Animations */
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
@@ -215,15 +262,45 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
   .stats-bar{grid-template-columns:repeat(2,1fr)}
   .fr2{grid-template-columns:1fr}
   .sg{grid-template-columns:1fr}
+  .ats-grid{grid-template-columns:1fr}
 }
 @media(max-width:540px){
   .proj-grid{grid-template-columns:1fr}
   .resume-inner{flex-direction:column;align-items:flex-start}
   .hero-actions{flex-direction:column;align-items:flex-start}
+  .wa-float{right:.75rem;bottom:.75rem;padding:.56rem .8rem}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Venkat Reddy Gopu",
+  "jobTitle":"Senior RPA Developer",
+  "url":"https://venkatreddygopu.github.io/portfolio/",
+  "email":"mailto:venkatgopu93@gmail.com",
+  "telephone":"+971567362208",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Dubai",
+    "addressCountry":"UAE"
+  },
+  "sameAs":["https://linkedin.com/in/venkatgopu"],
+  "knowsAbout":[
+    "UiPath",
+    "Kofax RPA",
+    "RPA Orchestrator",
+    "KTA",
+    "PowerShell",
+    "SharePoint",
+    "REST API Integration",
+    "Power BI"
+  ]
+}
+</script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav id="nav">
@@ -237,7 +314,7 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
       <li><a href="#contact">Contact</a></li>
     </ul>
     <!-- EDIT: resume filename -->
-    <a href="VenkatReddyGopu_Sr_RPA_Developer_9years.pdf" download class="nav-cta">Download CV</a>
+    <a href="VenkatReddyGopu_Sr.RPA%20Developer_9years.pdf" download class="nav-cta">Download CV</a>
     <button class="burger" onclick="toggleDrawer()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -249,7 +326,7 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
   <a href="#contact" onclick="closeDrawer()">Contact</a>
 </div>
 
-<main>
+<main id="main-content">
 
 <!-- HERO -->
 <section id="hero" aria-label="Introduction">
@@ -289,7 +366,7 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
         <a href="#contact" class="btn btn-dark">Get in Touch →</a>
         <a href="#projects" class="btn btn-outline">View Projects</a>
         <!-- EDIT: resume filename -->
-        <a href="VenkatReddyGopu_Sr_RPA_Developer_9years.pdf" download class="btn btn-outline">⬇ Resume</a>
+        <a href="VenkatReddyGopu_Sr.RPA%20Developer_9years.pdf" download class="btn btn-outline">⬇ Resume</a>
       </div>
       <!-- EDIT: Your key technologies -->
       <div class="hero-pills">
@@ -467,11 +544,13 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
         </div>
         <div>
           <h3 class="exp-role">Software Engineer — RPA</h3>
-          <p class="exp-desc">Delivered 7+ automation projects spanning logistics, banking, real estate, utilities, automotive, and travel. Built production bots integrating REST APIs, SharePoint, multi-database lookups, KTA document intelligence, MFA authentication, and Power BI reporting. Managed Orchestrator configuration, bot scheduling, and robot health monitoring.</p>
+          <p class="exp-desc lead-highlight">Worked as a Team Lead for 8-12 people in a client-facing role, driving end-to-end automation delivery including requirement gathering, WBS creation, effort estimation, documentation preparation, and maintaining project documents.</p>
+          <p class="exp-desc">Delivered 40+ automation projects spanning logistics, banking, real estate, utilities, automotive, and travel. Built production bots integrating REST APIs, SharePoint, multi-database lookups, KTA document intelligence, MFA authentication, and Power BI reporting. Managed Orchestrator configuration, bot scheduling, and robot health monitoring.</p>
           <div class="exp-tags">
             <span class="exp-tag">UiPath</span><span class="exp-tag">Kofax RPA</span>
             <span class="exp-tag">KTA</span><span class="exp-tag">API Integration</span>
             <span class="exp-tag">SharePoint</span><span class="exp-tag">Power BI</span>
+            <span class="exp-tag">Team Leadership</span><span class="exp-tag">Client Management</span>
           </div>
         </div>
       </article>
@@ -502,6 +581,10 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
       <div class="label">Projects</div>
       <h2 class="section-h">Selected Work</h2>
       <p class="section-sub">End-to-end automation solutions delivered across industries.</p>
+    </div>
+    <div class="proj-search reveal">
+      <label for="projectSearch" class="skill-cat-name" style="display:block;margin-bottom:.45rem;">Search projects by keyword</label>
+      <input id="projectSearch" type="search" placeholder="Try: API, SharePoint, KTA, Logistics, MFA" aria-label="Search projects by keyword"/>
     </div>
     <div class="proj-controls reveal">
       <button class="ftab on" onclick="filter(this,'all')">All</button>
@@ -623,6 +706,7 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
       </article>
 
     </div>
+    <p class="proj-empty" id="projEmpty">No projects match this filter. Try a different keyword or choose "All".</p>
   </div>
 </section>
 
@@ -635,8 +719,41 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
     </div>
     <div class="resume-actions reveal">
       <!-- EDIT: resume filename -->
-      <a href="VenkatReddyGopu_Sr_RPA_Developer_9years.pdf" download class="btn btn-gold">⬇ Download Resume PDF</a>
+      <a href="VenkatReddyGopu_Sr.RPA%20Developer_9years.pdf" download class="btn btn-gold">⬇ Download Resume PDF</a>
       <a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.65)">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ATS FRIENDLY PROFILE -->
+<section id="ats" aria-label="ATS-friendly profile summary">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label">ATS Profile</div>
+      <h2 class="section-h">Keyword-Rich Professional Snapshot</h2>
+      <p class="section-sub">This section is intentionally structured for recruiter scans, job portal indexing, and ATS keyword matching.</p>
+    </div>
+    <div class="ats-grid">
+      <article class="ats-card reveal">
+        <h3>Professional Summary</h3>
+        <p>Senior RPA Developer with 9.8+ years in IT and 5+ years in Robotic Process Automation, specialized in UiPath, Kofax RPA, KTA, Orchestrator governance, and API-driven enterprise automation. Hands-on experience in process discovery, solution design, bot development, deployment, production support, incident handling, and continuous optimization across logistics, finance, real estate, utilities, automotive, and travel domains.</p>
+      </article>
+      <article class="ats-card reveal">
+        <h3>Core ATS Keywords</h3>
+        <p>UiPath, Kofax RPA, KTA, Orchestrator, Attended Bots, Unattended Bots, Queue Management, SLA Monitoring, Exception Handling, Production Support, REST API, SharePoint, SQL, PowerShell, Excel Automation, Power BI, MFA Automation, Document Processing, Process Standardization, RPA Governance.</p>
+      </article>
+      <article class="ats-card reveal">
+        <h3>Impact Highlights</h3>
+        <ul>
+          <li>Delivered 9+ end-to-end automation projects across 6 industries with measurable effort reduction and process consistency.</li>
+          <li>Built multi-system automations integrating web portals, databases, mailboxes, SharePoint, ERP workflows, and reporting tools.</li>
+          <li>Implemented monitoring and alerting to improve bot reliability and reduce silent production failures.</li>
+        </ul>
+      </article>
+      <article class="ats-card reveal">
+        <h3>Preferred Roles</h3>
+        <p>Senior RPA Developer, RPA Solution Engineer, Intelligent Automation Developer, UiPath Developer, Kofax RPA Developer, Automation Consultant.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -703,6 +820,21 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
   </div>
 </footer>
 
+<!-- WhatsApp quick contact -->
+<a
+  href="https://wa.me/919652357549?text=Hi%20Venkat%2C%20I%20came%20across%20your%20portfolio%20and%20wanted%20to%20discuss%20an%20RPA%20opportunity."
+  class="wa-float"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat on WhatsApp"
+>
+  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M19.11 17.29c-.26-.13-1.52-.75-1.76-.84-.24-.09-.41-.13-.59.13-.17.26-.67.84-.82 1.01-.15.17-.3.2-.56.07-.26-.13-1.08-.4-2.06-1.26-.76-.67-1.27-1.5-1.42-1.76-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.59-1.43-.81-1.96-.21-.5-.43-.43-.59-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.17s.93 2.51 1.06 2.68c.13.17 1.83 2.79 4.43 3.91.62.27 1.11.43 1.49.55.63.2 1.2.17 1.65.1.5-.07 1.52-.62 1.74-1.22.22-.6.22-1.11.15-1.22-.06-.11-.24-.17-.5-.3Z"/>
+    <path fill="currentColor" d="M27.23 4.76A15.9 15.9 0 0 0 16 0C7.16 0 0 7.16 0 16c0 2.82.74 5.57 2.14 7.99L0 32l8.23-2.11A15.94 15.94 0 0 0 16 32c8.84 0 16-7.16 16-16 0-4.27-1.66-8.28-4.77-11.24Zm-11.23 24.5c-2.43 0-4.81-.65-6.9-1.88l-.5-.3-4.89 1.25 1.31-4.76-.33-.49A13.13 13.13 0 0 1 2.68 16C2.68 8.64 8.64 2.68 16 2.68c3.55 0 6.88 1.38 9.37 3.88A13.16 13.16 0 0 1 29.32 16c0 7.36-5.96 13.26-13.32 13.26Z"/>
+  </svg>
+  WhatsApp
+</a>
+
 <script>
 /* Nav shadow */
 const nav = document.getElementById('nav');
@@ -725,14 +857,29 @@ const ro=new IntersectionObserver(entries=>{
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
 /* Project filter */
+let activeFilter='all';
 function filter(btn,cat){
+  activeFilter=cat;
   document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('on'));
   btn.classList.add('on');
+  applyProjectFilter();
+}
+
+function applyProjectFilter(){
+  const q=(document.getElementById('projectSearch')?.value||'').trim().toLowerCase();
+  let visible=0;
   document.querySelectorAll('.proj-card').forEach(c=>{
     const cats=c.dataset.cat?c.dataset.cat.split(' '):[];
-    c.hidden=cat!=='all'&&!cats.includes(cat);
+    const text=(c.textContent||'').toLowerCase();
+    const matchesCategory=activeFilter==='all'||cats.includes(activeFilter);
+    const matchesQuery=!q||text.includes(q);
+    c.hidden=!(matchesCategory&&matchesQuery);
+    if(!c.hidden) visible+=1;
   });
+  const empty=document.getElementById('projEmpty');
+  if(empty) empty.style.display=visible===0?'block':'none';
 }
+document.getElementById('projectSearch')?.addEventListener('input',applyProjectFilter);
 
 /* Contact form */
 function submitForm(e){
