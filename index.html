@@ -245,6 +245,13 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
 .reveal.in{opacity:1;transform:translateY(0)}
 
+/* Accessibility: reduce motion when requested */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .reveal{opacity:1;transform:none}
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--cream)}
@@ -255,6 +262,7 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
 @media(max-width:900px){
   .nav-links,.nav-cta{display:none}
   .burger{display:flex}
+  section{padding:3.5rem 0}
   .about-grid{grid-template-columns:1fr;gap:2.25rem}
   .profile-card{position:static}
   .contact-grid{grid-template-columns:1fr;gap:2.25rem}
@@ -265,10 +273,21 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
   .ats-grid{grid-template-columns:1fr}
 }
 @media(max-width:540px){
+  section{padding:3rem 0}
+  .hero-name{font-size:clamp(2.3rem,10vw,3rem)}
+  .hero-desc{font-size:.94rem;line-height:1.75}
+  .btn{padding:.66rem 1.2rem}
   .proj-grid{grid-template-columns:1fr}
   .resume-inner{flex-direction:column;align-items:flex-start}
   .hero-actions{flex-direction:column;align-items:flex-start}
+  .hero-actions .btn{width:100%;justify-content:center}
+  .proj-controls{gap:.45rem}
+  .ftab{font-size:.74rem;padding:.3rem .72rem}
+  .exp-item{padding:1.5rem 0}
+  .foot-inner{justify-content:center;text-align:center}
+  .foot-links{gap:1rem;flex-wrap:wrap;justify-content:center}
   .wa-float{right:.75rem;bottom:.75rem;padding:.56rem .8rem}
+  .wa-float span{display:none}
 }
 </style>
 <script type="application/ld+json">
@@ -832,7 +851,7 @@ footer{background:var(--cream);border-top:1px solid var(--rule);padding:1.75rem 
     <path fill="currentColor" d="M19.11 17.29c-.26-.13-1.52-.75-1.76-.84-.24-.09-.41-.13-.59.13-.17.26-.67.84-.82 1.01-.15.17-.3.2-.56.07-.26-.13-1.08-.4-2.06-1.26-.76-.67-1.27-1.5-1.42-1.76-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.59-1.43-.81-1.96-.21-.5-.43-.43-.59-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.17s.93 2.51 1.06 2.68c.13.17 1.83 2.79 4.43 3.91.62.27 1.11.43 1.49.55.63.2 1.2.17 1.65.1.5-.07 1.52-.62 1.74-1.22.22-.6.22-1.11.15-1.22-.06-.11-.24-.17-.5-.3Z"/>
     <path fill="currentColor" d="M27.23 4.76A15.9 15.9 0 0 0 16 0C7.16 0 0 7.16 0 16c0 2.82.74 5.57 2.14 7.99L0 32l8.23-2.11A15.94 15.94 0 0 0 16 32c8.84 0 16-7.16 16-16 0-4.27-1.66-8.28-4.77-11.24Zm-11.23 24.5c-2.43 0-4.81-.65-6.9-1.88l-.5-.3-4.89 1.25 1.31-4.76-.33-.49A13.13 13.13 0 0 1 2.68 16C2.68 8.64 8.64 2.68 16 2.68c3.55 0 6.88 1.38 9.37 3.88A13.16 13.16 0 0 1 29.32 16c0 7.36-5.96 13.26-13.32 13.26Z"/>
   </svg>
-  WhatsApp
+  <span>WhatsApp</span>
 </a>
 
 <script>
