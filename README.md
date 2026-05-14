@@ -4,7 +4,7 @@ Personal portfolio website for Venkat Reddy Gopu, Senior RPA Developer.
 
 🌐 **Live site:** https://venkatreddygopu.github.io/portfolio
 
-## Tech
+## Tech 
 - Pure HTML, CSS, JavaScript — no build tools needed
 - Hosted via GitHub Pages
 - Auto-deploys on every push to `main`
